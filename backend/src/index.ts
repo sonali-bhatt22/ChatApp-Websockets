@@ -1,6 +1,10 @@
 import { WebSocketServer, WebSocket } from "ws";
+import http from "http"
 
-const wss = new WebSocketServer({port: 8001})
+
+// Create a basic HTTP server (needed for Render)
+const server = http.createServer();
+const wss = new WebSocketServer({ server });
 
 interface User {
     socket: WebSocket;
@@ -41,3 +45,10 @@ wss.on("connection", function(socket){
         allSockets = allSockets.filter(x => x.socket !== socket);
     });
 })
+
+
+// ✅ Listen on the port Render provides
+const PORT = process.env.PORT || 8001;
+server.listen(PORT, () => {
+  console.log(`WebSocket server running on port ${PORT}`);
+});
