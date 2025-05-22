@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    
+    overflow: scroll; /* Allow scrolling */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer / Edge (Legacy) */
+  }
+  
+  .container::-webkit-scrollbar {
+    display: none; /* Webkit browsers (Chrome, Safari, etc.) */
+  }
