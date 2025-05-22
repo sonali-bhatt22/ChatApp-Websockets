@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { useParams } from "react-router-dom";
-import { motion, AnimatePresence } from "motion/react"
+import { motion } from "motion/react"
 import Rooms from "./Rooms";
 
 
@@ -34,7 +34,7 @@ function ChatRoom() {
     inputRef.current.value = " ";
     
   }
-  const handleKeyPress=(event)=>{
+  const handleKeyPress=(event: { key: string; shiftKey: any; })=>{
     if (event.key === 'Enter' && !event.shiftKey) {
        
         sendMessage(); // Trigger send message
