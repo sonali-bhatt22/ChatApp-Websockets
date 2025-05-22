@@ -43,7 +43,12 @@ function ChatRoom() {
 
   //code for recieving what server sent
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:8001");
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:8001";
+    const wsUrl = backendUrl.replace(/^http/, (match: string) => (match === "https" ? "wss" : "ws"));
+    const ws = new WebSocket(wsUrl);
+
+
+    // const ws = new WebSocket("ws://localhost:8001");
     setSocket(ws);
     ws.onmessage = (event) => {
       // alert(event.data)
