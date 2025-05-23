@@ -1,5 +1,6 @@
 🚀 Live Demo
-Frontend: chatapp-frontend-z5lo.onrender.com
+---
+Frontend: https://chatapp-frontend-z5lo.onrender.com
 
-Backend: chatapp-websockets.onrender.com
+Backend: https://chatapp-websockets.onrender.com
 
