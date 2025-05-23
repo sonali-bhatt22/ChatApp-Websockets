@@ -1,5 +1,5 @@
 
-📌 **How it works**
+## 📌 How it works
 The app uses WebSockets to enable real-time, two-way communication between users.
 
 Users can join a chat room by entering a Room ID.
