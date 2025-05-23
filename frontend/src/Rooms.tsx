@@ -6,9 +6,9 @@ type RoomsProps = {
 const Rooms = ({roomId, onClick}:RoomsProps) => {
 
   return (
-    <div onClick={onClick} className=" bg-blue-500 flex flex-col gap-3 p-3">
-        <span className="text-lg font-bold">Chatrooms</span>
-        <div  className="bg-black p-3">{roomId}</div>
+    <div onClick={onClick} className=" bg-[#3694bcac] flex flex-col gap-1 p-1 sm:gap-3 sm:p-3">
+        <span className="text-lg font-semibold">Chatrooms</span>
+        <div  className="bg-black rounded sm:p-3 p-2">{roomId}</div>
     </div>
   );
 };

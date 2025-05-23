@@ -4,11 +4,21 @@
 
 .container {
     
-    overflow: scroll; /* Allow scrolling */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer / Edge (Legacy) */
+    overflow: auto; /* Allow scrolling */
+    scrollbar-width: auto; /* Firefox */
+    -ms-overflow-style: auto; /* Internet Explorer / Edge (Legacy) */
   }
   
   .container::-webkit-scrollbar {
-    display: none; /* Webkit browsers (Chrome, Safari, etc.) */
-  }
+  width: 2px;
+  height: 2px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #888; /* color of the thumb */
+  border-radius: 4px;
+}
+
+.container::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* color of the track */
+}
