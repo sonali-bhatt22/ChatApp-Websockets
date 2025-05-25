@@ -115,7 +115,7 @@ function ChatRoom() {
                           damping: 20,
                         }}
                         className={`py-2 px-3 ${
-                          msg.type === "sent" ? "bg-[#3694bc]" : "bg-gray-600"
+                          msg.type === "sent" ? "bg-[#3694bc] max-w-80 break-words " : "bg-gray-600"
                         } bg-[#0369a1] text-white rounded`}
                       >
                         {msg.text}
@@ -136,9 +136,9 @@ function ChatRoom() {
                 enterKeyHint="enter"
                 onKeyDown={handleKeyPress}
               />
-              <button className="rounded absolute right-4 bottom-4" onClick={sendMessage}>
+              <button className="rounded" onClick={sendMessage}>
                 <img
-                  className="w-8  rounded"
+                  className="w-10 h-10 rounded"
                   src="https://media.istockphoto.com/id/1290684294/vector/send-message-icon.jpg?s=612x612&w=0&k=20&c=8vwd4PDMzEELKMUrTQ7LZnpngAN5Bzs55sRJ09sA8FU="
                   alt=""
                 />
