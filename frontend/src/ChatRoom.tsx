@@ -115,8 +115,8 @@ function ChatRoom() {
                           damping: 20,
                         }}
                         className={`py-2 px-3 ${
-                          msg.type === "sent" ? "bg-[#3694bc] max-w-80 break-words " : "bg-gray-600"
-                        } bg-[#0369a1] text-white rounded`}
+                          msg.type === "sent" ? "bg-[#3694bc] " : "bg-gray-600"
+                        } bg-[#0369a1] text-white rounded max-w-80 break-words`}
                       >
                         {msg.text}
                       </motion.div>
